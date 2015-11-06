@@ -1,0 +1,134 @@
+body, div {
+	padding: 0;
+	background-color: rgba(164, 164, 0, 0.2);
+}
+
+.divMain {
+	width: 1024px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+p {
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: #404040;
+}
+
+@font-face {
+	font-family: lovely;
+	src:url('Fins-Regular.otf');
+}
+
+.div1 {
+	width: 1024px;
+	height: 330pt;
+	background: url('h1_bg.png') no-repeat;
+	background-size: 1024px auto;
+	overflow:hidden;
+}
+
+h1 {
+	font-family: lovely;
+	font-size: 50pt;
+	color: rgb(60, 27, 33);
+	background-color: rgba(60, 27, 33, 0.3);
+	float: left;
+	line-height: 80pt;
+}
+
+.div2 {
+	width: 1024px;
+	height: 270pt;
+	background-color: rgba(164, 164, 0, 0.4);
+	overflow:hidden;
+}
+
+.div2a {
+	width: 819px;
+	height: 80pt;
+	position: relative;
+	left: 102px;
+	top: 10pt;
+}
+
+#h2a {
+	font-family: lovely;
+	font-size: 20pt;
+	color: #404040;
+	float: left;
+}
+
+.div2b {
+	width: 1024px;
+	height: 160pt;
+	position: absolute;
+	top: 440pt;
+}
+
+.display {
+	width: 338px;
+	height: 150pt;
+}
+
+#menuP {
+	float: right;
+	width: 60%;
+	height: 100%;
+}
+
+.div3 {
+	width: 1024px;
+	height: 300pt;
+	background-color: rgba(164, 164, 0, 0.4);
+	overflow:hidden;
+}
+
+.div3a {
+	width: 819px;
+	height: 265pt;
+	position: relative;
+	left: 102px;
+	top: 0;
+}
+
+#h2b {
+	font-family: lovely;
+	font-size: 20pt;
+	color: #404040;
+	text-align: center;
+	position: relative;
+	top: 10pt;
+}
+
+.div3aa {
+	background-color: transparent;
+	width: 410px;
+	position: relative;
+	left: 410px;
+	top: 40pt;
+}
+
+#linkPie {
+	position: absolute;
+	left: 102px;
+	top: 40pt;
+	text-align: center;
+}
+
+#imgPie {
+	width: 150pt;
+}
+
+#heart {
+	height: 200pt;
+	position: absolute;
+	top: 590pt;
+	left: 717px;
+}
+
+#link {
+	text-align: center;
+}
+
+
