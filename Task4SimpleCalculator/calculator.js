@@ -25,7 +25,7 @@ window.onload = function() {
 	document.getElementById('result').onclick = function(event) {
 		try {var result = eval(expression);
 			expInput.value = result;
-			expression = "";
+			expression = result.toString();
 		} catch (e) {
 			expInput.value = "error!"
 			alert("Input error!")
