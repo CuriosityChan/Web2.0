@@ -1,0 +1,184 @@
+body {
+	text-align: center;
+}
+
+h1, p {
+	text-align: center;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 23px;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+
+#main {
+	width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
+}
+
+#outerMaze {
+	width: 502px;
+	height: 302px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+#innerMaze {
+	width: 502px;
+	height: 302px;
+}
+
+#outerMaze div {
+	position: absolute;
+}
+
+.wall {
+	background-color: #EEEEEE;
+}
+
+#wall1 {
+	width: 150px;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+}
+
+#wall2 {
+	width: 200px;
+	height: 49px;
+	top: 0px;
+	left: 151px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#wall3 {
+	width: 150px;
+	height: 50px;
+	top: 0px;
+	left: 351px;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#wall4 {
+	width: 150px;
+	height: 150px;
+	top: 50px;
+	left: 0px;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#wall5 {
+	width: 150px;
+	height: 150px;
+	top: 50px;
+	right: 0px;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#wall6 {
+	width: 200px;
+	height: 50px;
+	bottom: 0px;
+	left: 0px;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+#wall7 {
+	width: 100px;
+	height: 150px;
+	bottom: 51px;
+	left: 200px;
+	border-left: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#wall8 {
+	width: 100px;
+	height: 50px;
+	bottom: 0px;
+	left: 201px;
+	border-bottom: 1px solid black;
+}
+
+#wall9 {
+	width: 200px;
+	height: 50px;
+	bottom: 0px;
+	right: 0px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#innerMaze, #start, #end {
+	cursor: pointer;
+}
+
+.wall {
+	cursor: default;
+}
+
+.tag {
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	bottom: 56px;
+	font-size: 38px;
+	text-align: center;
+	line-height: 42px;
+}
+
+#start {
+	left: 0px;
+	background-color: #83FF83;
+}
+
+#end {
+	right: 0px;
+	background-color: #8685FD;
+}
+
+#main p {
+	text-align: left;
+	font-size: 17px;
+}
+
+#exampleWall {
+	width: 100px;
+	height: 27px;
+	border: 1px solid black;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.touchedWall {
+	background-color: red;
+	cursor: default;
+}
+

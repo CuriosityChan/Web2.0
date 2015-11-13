@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>简单迷宫</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="maze.css">
+	<script src="maze.js" type="text/javascript"></script>
+	<script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<h1>The Amazing Mouse Maze!</h1>
+	<p>Move your mouse over the "S" to begin.</p>
+	<p class="hidden" id="result">Don't cheat, you should start from the 'S' and move to the 'E' inside the maze!</p>
+	<div id="main">
+		<div id="outerMaze">
+			<div id="innerMaze">
+				<div class="wall" id="wall1"></div>
+				<div class="wall" id="wall2"></div>
+				<div class="wall" id="wall3"></div>
+				<div class="wall" id="wall4"></div>
+				<div class="wall" id="wall5"></div>
+				<div class="wall" id="wall6"></div>
+				<div class="wall" id="wall7"></div>
+				<div class="wall" id="wall8"></div>
+				<div class="wall" id="wall9"></div>
+				<div class="tag" id="start">S</div>
+				<div class="tag" id="end">E</div>
+			</div>
+		</div>
+		<p>The object of this game is guide the mouse cursor through the start area and get to the end area. Be sure to avoid the walls:</p>
+		<div class="wall" id="exampleWall"></div>
+		<p>Good luck!</p>
+	</div>
+</body>
+</html>
