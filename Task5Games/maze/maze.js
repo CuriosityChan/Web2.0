@@ -4,7 +4,7 @@ window.onload = function() {
 	var end = document.getElementById('end');
 	var lose = 0, started = 0;
 	var walls = document.getElementsByClassName('wall');
-	var outerMaze = document.getElementById('outerMaze');
+	var outerMaze = document.getElementById('main');
 	var innerMaze = document.getElementById('innerMaze');
 	var result = document.getElementById('result');
 	var state = document.getElementById('state');
