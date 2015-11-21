@@ -68,13 +68,19 @@ window.onload = function() {
 				selectedPieceNum++;
 			} else if (selectedPieceNum == 1) {
 				pieceToBeExchanged[1] = event.target;
-				pieceToBeExchangedImgPos[1] = pieceToBeExchanged[1].className.substr(12);
-				pieceToBeExchanged[0].className = 'piece imgPos' + pieceToBeExchangedImgPos[1];
-				pieceToBeExchanged[1].className = 'piece imgPos' + pieceToBeExchangedImgPos[0];
-				step.value = parseInt(step.value) + 100;
-				selectedPieceNum--;
-				isUseMf--;
-				mf.className = 'unSelectedMf';			}
+				if (pieceToBeExchanged[0] != pieceToBeExchanged[1]) {
+					pieceToBeExchangedImgPos[1] = pieceToBeExchanged[1].className.substr(12);
+					pieceToBeExchanged[0].className = 'piece imgPos' + pieceToBeExchangedImgPos[1];
+					pieceToBeExchanged[1].className = 'piece imgPos' + pieceToBeExchangedImgPos[0];
+					step.value = parseInt(step.value) + 100;
+					selectedPieceNum--;
+					isUseMf--;
+					mf.className = 'unSelectedMf';
+				} else {
+					pieceToBeExchanged[0].className = 'piece imgPos' + pieceToBeExchangedImgPos[0];
+					selectedPieceNum--;
+				}		
+			}
 		}
 	}();
 
@@ -94,19 +100,19 @@ window.onload = function() {
 				event.target.className = 'piece imgPos15';
 				blankPiece.className = 'piece imgPos'+targetImgNum.toString();
 
-				if (isSucceed()) {
-					alert("Succeed! You cost " + step.value + " steps.");
-					for (var i = pieces.length - 1; i >= 0; i--) {
-						pieces[i].removeEventListener('click', move);
-					}
-					mfb.removeEventListener('click', clickMf);
-					state.className = 'visible';
-				}
 			}
+		}
+		if (isSucceed()) {
+			alert("Succeed! You cost " + step.value + " steps.");
+			for (var i = pieces.length - 1; i >= 0; i--) {
+				pieces[i].removeEventListener('click', move);
+			}
+			mfb.removeEventListener('click', clickMf);
+			state.className = 'visible';
 		}
 	}
 
-	// 没走一步都要判断是否成功
+	// 每走一步都要判断是否成功
 	function isSucceed() {
 		for (var i = pieces.length - 1; i >= 0; i--) {
 			if (parseInt(pieces[i].className.substr(12)) != i) {
