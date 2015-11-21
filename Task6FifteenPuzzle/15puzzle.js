@@ -15,9 +15,9 @@ window.onload = function() {
 	var state = document.getElementById('state');
 	var mfb = document.getElementById('mf');
 
-	// 通过从初始状态随机往任意方向走0-999步来达到打乱的效果
+	// 通过从初始状态随机往任意方向走1000步来达到打乱的效果
 	var disrupt = function() {  
-		var randomMoveCount = Math.floor(Math.random()*1000);
+		var randomMoveCount = 1000;
 		step.value = '0';
 		for (var i = pieces.length - 1; i >= 0; i--) {
 	 		pieces[i].className = 'piece imgPos'+i.toString();
