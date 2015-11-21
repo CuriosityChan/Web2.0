@@ -1,0 +1,167 @@
+body {
+	background-color: #F5DDAF;
+	text-align: center;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+#gameBoard {
+	height: 308px;
+	width: 308px;
+	border: 10px solid #F1A164;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	background-color: white;
+}
+
+.piece {
+	height: 75px;
+	width: 75px;
+	background-image: url('XiaoMai.jpg');
+	background-size: 300px 300px;
+	/*background-attachment: fixed;*/
+	float: left;
+	margin: 1px;
+}
+
+.piece:hover {
+	-moz-transform: scale(1.03, 1.03);
+	-webkit-transform: scale(1.03, 1.03);
+}
+
+.imgPos0 {
+	background-position: 0px 0px;
+}
+
+.imgPos1 {
+	background-position: -75px 0px;
+}
+
+.imgPos2 {
+	background-position: -150px 0px;
+}
+
+.imgPos3 {
+	background-position: -225px 0px;
+}
+
+.imgPos4 {
+	background-position: 0px -75px;
+}
+
+.imgPos5 {
+	background-position: -75px -75px;
+}
+
+.imgPos6 {
+	background-position: -150px -75px;
+}
+
+.imgPos7 {
+	background-position: -225px -75px;
+}
+
+.imgPos8 {
+	background-position: 0px -150px;
+}
+
+.imgPos9 {
+	background-position: -75px -150px;
+}
+
+.imgPos10 {
+	background-position: -150px -150px;
+}
+
+.imgPos11 {
+	background-position: -225px -150px;
+}
+
+.imgPos12 {
+	background-position: 0px -225px;
+}
+
+.imgPos13 {
+	background-position: -75px -225px;
+}
+
+.imgPos14 {
+	background-position: -150px -225px;
+}
+
+.imgPos15 {
+	background-image: none;
+}
+
+.selected {
+	opacity: 0.7;
+}
+
+input, button, p {
+	font-size: 15px;
+}
+
+button {
+	width: 100px;
+	height: 25px;
+	margin-bottom: 20px;
+}
+
+button+input {
+	width: 40px;
+	border: none;
+	color: black;
+	background-color: #F5DDAF;
+	margin-left: 80px;
+}
+
+input+input {
+	width: 80px;
+	height: 18px;
+	text-align: center;
+}
+
+#mf {
+	margin-top: -30px;
+	margin-left: 450px;
+	height: 80px;
+	width: 80px;
+	border-radius: 100px;
+	background-size: 150px 150px;
+	background-image: url('mfb.png');
+	background-position: -35px -35px;
+	outline:none;
+}
+
+.unSelectedMf {
+	border: 2px solid black;
+}
+
+.selectedMf {
+	border: 2px solid #F1A164;
+}
+
+#state {
+	width: 280px;
+	border: none;
+	background-color: #F5DDAF;
+	color: black;
+	display: block;
+	margin-top: -30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.inVisible {
+	visibility: hidden;
+}
