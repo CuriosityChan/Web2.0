@@ -1,0 +1,53 @@
+h1, h2 {
+	font-size: 15px;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+table {
+	height: 80px;
+	font-size: 13px;
+	text-align: left;
+	border-collapse: collapse;
+	font-family: sans-serif;
+}
+
+#todo {
+	width: 350px;
+}
+
+#staff {
+	width: 300px;
+}
+
+th, td {
+	padding: 2px;
+	border: 1px solid #BEBEBE;
+}
+
+th {
+	background-color: #011762;
+	color: white;
+}
+
+tr:nth-child(even) td {
+	background-color: #DDDBDD;
+}
+
+tr:nth-child(odd) td {
+	background-color: white;
+}
+
+.ascend {
+	background-image: url('ascend.png');
+}
+
+.descend {
+	background-image: url('descend.png');
+}
+
+.clicked {
+	background-color: #A4B0FC;
+	background-position: right;
+	background-repeat: no-repeat;
+}
