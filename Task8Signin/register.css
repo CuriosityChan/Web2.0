@@ -1,0 +1,70 @@
+body {
+	background-color: #DBE0AA;
+}
+
+div {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 310px;
+	height: auto;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+	border-radius: 10px;
+	padding-right: 90px;
+	padding-left: 90px; 
+	overflow: hidden;
+}
+
+h1 {
+	color: #493D65;
+	text-align: center;
+	vertical-align: center;
+	font-size: 25px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+input {
+	float: left;
+	height: 27px;
+	border: 1px solid gray;
+	margin-top: 10px;
+}
+
+input:nth-child(odd) {
+	width: 90px;
+	/*border: none;*/
+	background-color: #7CA1B3;
+	border-radius: 4px 0px 0px 4px;
+}
+
+input:nth-child(even) {
+	width: 210px;
+	border-radius: 0px 4px 4px 0px;
+}
+
+input:nth-child(7), input:nth-child(8) {
+	margin-bottom: 50px;
+}
+
+input:nth-child(9), input:nth-child(10) {
+	width: 100px;
+	margin-left: 34px;
+	margin-top: -10px;
+	background-color: #483F5F;
+	border-radius: 0;
+	color: white;
+	height: 30px;
+}
+
+#error {
+	background-color: rgba(0, 0, 0, 0);
+	width: 300px;
+	color: red;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 13px;
+	overflow: scroll;
+}
