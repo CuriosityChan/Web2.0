@@ -1,0 +1,11 @@
+{
+  "name": "asynjavascript",
+  "version": "1.0.0",
+  "description": "a simple asyn javaScript sample",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "404228340@qq.com",
+  "license": "ISC",
+}
