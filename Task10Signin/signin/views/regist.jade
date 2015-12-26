@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div.main
+    h1 用户注册
+    form(method='post')
+      if error
+        div.error!= error
+      div.username
+        lable(for='username') 用户名
+        input(id='username' name='username' value=user.username)
+        span.error
+
+      div.password
+        lable(for='password') 密码
+        input(id='password' name='password' value=user.password type='password')
+        span.error
+
+      div.passwordAgain
+        lable(for='passwordAgain') 确认密码
+        input(id='passwordAgain' value=user.passwordAgain type='password')
+        span.error
+
+      div.sid
+        lable(for='sid') 学号
+        input(id='sid' name='sid' value=user.sid)
+        span.error
+
+      div.phone
+        lable(for='phone') 电话
+        input(id='phone' name='phone' value=user.phone)
+        span.error
+
+      div.email
+        lable(for='email') 邮箱
+        input(id='email' name='email' value=user.email)
+        span.error
+
+      div.buttons
+        input.button.reset(type='reset' value='清除')
+        input.button.submit(type='submit' value='提交')
+        a.switch-regist-signin(href='/signin') 登录
+
+  script(type='text/javascript' src='javascripts/jquery.js')
+  script(type='text/javascript' src='javascripts/regist.js')
+  script(type='text/javascript' src='javascripts/validator.js')
+

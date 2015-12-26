@@ -1,0 +1,68 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #DBE0AA;
+}
+
+.main {
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+h1 {
+  color: #493D65;
+  font-size: 25px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+form>div {
+  margin-bottom: 10px;
+}
+
+form>div lable {
+  margin-right: 5px;
+}
+
+lable+input {
+  position: absolute;
+  left: 60px;
+  width: 100px;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.button {
+  width: 50px;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+a {
+  font-size: 15px;
+}
+
+input+a {
+  margin-left: 40px;
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+  display: block;
+}
+
+input+.error {
+  font-size: 10px;
+  position: absolute;
+  left: 170px;
+  display: none;
+}
+
+
+
+

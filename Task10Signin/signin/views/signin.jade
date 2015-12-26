@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div.main
+    h1 用户登陆
+    form(method='post')
+      if error
+        div.error!= error
+      div.username
+        lable(for='username') 用户名
+        input(id='username' name='username' value='')
+
+      div.password
+        lable(for='password') 密码
+        input(id='password' name='password' type='password' value='')
+
+      div.buttons
+        input.button.reset(type='reset' value='清除')
+        input.button.submit(type='submit' value='登录')
+        a.switch-signin-regist(href='/regist') 注册
