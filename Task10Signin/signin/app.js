@@ -22,7 +22,7 @@ module.exports = function(db) {
   app.use(logger('dev'));
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
-  app.use(cookieParser());
+  app.use(cookieParser('modern web programming'));
   app.use(session({
     store: new FileStore(),
     resave: false,

@@ -20,8 +20,8 @@ module.exports = function(db) {
       .then(userManager.createUser(user))
       .then(function() {
         var hour = 3600000;
-        req.session.user = user;
-        req.session.cookie.maxAge = hour;
+        res.cookie('user', user, {maxAge: hour});
+        //req.session.cookie.maxAge = hour;
         res.redirect('/detail');
       })
       .catch(function(error) {
@@ -37,8 +37,7 @@ module.exports = function(db) {
     userManager.findUser(req.body.username, req.body.password)
       .then(function(user) {
         var hour = 3600000;
-        req.session.user = user;
-        req.session.cookie.maxAge = hour;
+        res.cookie('user', user, {maxAge: hour});
         res.redirect('/detail');
       })
       .catch(function(error) {
@@ -47,7 +46,8 @@ module.exports = function(db) {
   });
 
   router.get('/signout', function(req, res, next) {
-    delete req.session.user;
+    res.clearCookie('user');
+    //delete req.session.user;
     res.redirect('/signin');
   });
 
@@ -62,23 +62,23 @@ module.exports = function(db) {
   });
 
   router.all('*', function(req, res, next) {
-    req.session.user? next() : res.redirect('/signin');
+    req.cookies.user? next() : res.redirect('/signin');
   });
 
   router.get('/detail', function(req, res, next) {
     var authorityError = req.session.authorityError;
     req.session.authorityError = null;
-    res.render('detail', { title: '详情', error: authorityError, user: req.session.user });
+    res.render('detail', { title: '详情', error: authorityError, user: req.cookies.user });
   });
 
   router.post('/detail', function(req, res, next) {
-    res.render('detail', { title: '详情', error: req.error, user: req.session.user });
+    res.render('detail', { title: '详情', error: req.error, user: req.cookies.user });
   });
 
   router.get('/', function(req, res, next) {
     var username = req.query.username;
     if (username) {
-      if (username != req.session.user.username) req.session.authorityError = '只能够访问自己的数据';
+      if (username != req.cookies.user.username) req.session.authorityError = '只能够访问自己的数据';
       res.redirect('/detail');
     } else {
       res.redirect('/detail');
